@@ -46,7 +46,7 @@ export default function Login() {
                 Sign in
               </Typography>                
                 <Button
-                  href='https://accounts.zoho.com/oauth/v2/auth?client_id=1000.O3LDCQ76EIZ2WCN7ME44YFI5FWP0RF&response_type=token&scope=ZohoCRM.modules.ALL&redirect_uri=http://localhost:3000/loading'
+                  href={process.env.REACT_APP_GET_TOKEN}
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}

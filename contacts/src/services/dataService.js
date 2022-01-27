@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const url = "https://www.zohoapis.com/crm/v2";
+
+const url = process.env.REACT_APP_API_URL;
 const token = localStorage.getItem('token');
 const instance = axios.create({
     baseURL: url,
@@ -21,6 +22,7 @@ instance.interceptors.request.use(
  // For POST requests
  instance.interceptors.response.use(
     (res) => {
+        console.log(res)
         if(res.data.data[0].code==='DUPLICATE_DATA'){
             alert('Contact already exist!')
             return Promise.reject()
