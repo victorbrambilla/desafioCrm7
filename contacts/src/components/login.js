@@ -10,8 +10,18 @@ import Typography from '@mui/material/Typography';
  
 import gs from '../assets/login.gif'
 import logo from '../assets/zohoLogo.png'
+import { useNavigate } from 'react-router-dom';
+
+import Link from '@mui/material/Link';
 
 export default function Login() {
+  const nav = useNavigate();
+  const  url = process.env.REACT_APP_GET_TOKEN
+
+  const navigate=()=>{
+    nav(process.env.REACT_APP_GET_TOKEN)
+  }
+  
     return (
         
          <Grid container  component="main" sx={{ height: '100vh' }}>
@@ -46,12 +56,12 @@ export default function Login() {
                 Sign in
               </Typography>                
                 <Button
-                  href={process.env.REACT_APP_GET_TOKEN}
+                  onClick={navigate}
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
                 >
-                  <Typography color='white' component='h3' variant="h7" >Sign In with Zoho Account </Typography>
+                  <Typography color='white' component='h3' variant="h7" >Sign In with Zoho Account</Typography>
                   <img style={{width:'60px', height:'auto'}} alt='zohologo' src={logo}></img>
                 </Button>
                 <Grid container>
