@@ -56,7 +56,7 @@ export default function Login() {
                 Sign in
               </Typography>                
                 <Button
-                  onClick={navigate}
+                  href={url}
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
