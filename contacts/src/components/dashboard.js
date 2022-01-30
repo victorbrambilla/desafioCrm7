@@ -1,9 +1,8 @@
-import { Container, CssBaseline, Divider, Grid } from '@mui/material'
+import { Container, Divider, Grid } from '@mui/material'
 
 import React from 'react'
 import Header from './Header'
-import SubHeader from './SubHeader'
-import DataTable from './table/table2'
+import DataTable from './table/Table'
 
 
 export default function Dashboard() {
@@ -11,15 +10,10 @@ export default function Dashboard() {
     return (
         <>
         <Header />
-        <SubHeader/>
         <Divider light />
-        <Grid container component="main" sx={{ height: '100vh' }}>
-            
-                <Container maxWidth='lg' sx={{mt:10}}>
-                     <DataTable />
-                </Container>
-        </Grid>
-        
+        <div style={{height:'80vh'}}>
+          <DataTable />
+        </div>
         </>
      )
 }
