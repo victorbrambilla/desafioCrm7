@@ -3,8 +3,7 @@ import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 import { GlobalContext } from '../../contexts/GlobalStorage';
 import { CustomFooterStatusComponent } from './customFooterTable';
-import { Box, Fab, Typography } from '@mui/material';
-import Add from '@mui/icons-material/Add';
+import { Box, Typography } from '@mui/material';
 import ModalPage from '../Modal';
 
 const columns = [

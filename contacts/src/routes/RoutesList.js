@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Login from '../components/login';
+import Login from '../components/Login';
 import Page404 from '../components/Page404'
 import Dashboard from '../components/Dashboard';
 import { RequireAuth } from '../services/auth';

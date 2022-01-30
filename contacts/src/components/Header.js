@@ -5,7 +5,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Button } from '@mui/material';
-import ContactPageSharpIcon from '@mui/icons-material/ContactPageSharp';
 import { useNavigate  } from 'react-router-dom';
 
 export default function Header() {
@@ -20,13 +19,12 @@ export default function Header() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
             <Toolbar>
-                <Typography color={'primary'} variant="h5" component="div" sx={{ flexGrow: 1, display:'flex', alignItems:'center' }}>
+                <Typography color="inherit" variant="h5" component="div" sx={{ flexGrow: 1, display:'flex', alignItems:'center' }}>
                     MyContacts
-                    <ContactPageSharpIcon color='secondary' fontSize='large'/>
                 </Typography>
                 
-                <Button onClick={handleChange}  >
-                    <LogoutIcon color='secondary'></LogoutIcon>
+                <Button onClick={handleChange} color={'inherit'}  >
+                    <LogoutIcon color='primary'></LogoutIcon>
                     Logout
                 </Button>
                 
