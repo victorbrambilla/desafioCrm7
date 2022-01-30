@@ -31,7 +31,7 @@ instance.interceptors.request.use(
     },
     (err) => {
         console.log(err.response)
-        if(err.response.data.message === 'invalid oauth token'){
+        if(err.response.data.code === "INVALID_REQUEST"){
             localStorage.removeItem('token');
             window.location.reload()   
         }
@@ -73,6 +73,12 @@ export const dataService = {
     
     deleteContact: async (id)=>{
         let res = await instance.delete(`/Contacts/${id}`, {
+        })
+        return res.data
+    },
+
+    deleteAllContacts: async (ids)=>{
+        let res = await instance.delete(`/Contacts?ids=${ids}`, {
         })
         return res.data
     }

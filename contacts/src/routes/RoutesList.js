@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Login from '../components/login';
 import Page404 from '../components/Page404'
-import Dashboard from '../components/dashboard';
+import Dashboard from '../components/Dashboard';
 import { RequireAuth } from '../services/auth';
 import Loading from '../components/Loading';
 

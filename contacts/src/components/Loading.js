@@ -19,7 +19,7 @@ export default function Loading() {
                 navigate('/')
             }
         },1000)
-    },[])
+    },[location.hash, navigate])
     
 
   return (

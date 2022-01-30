@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import {styled } from '@mui/material/styles';
 import { ArrowBack } from '@mui/icons-material';
-
+import LoadingButton from '@mui/lab/LoadingButton';
 import { dataService } from '../services/dataService';
 import { GlobalContext } from '../contexts/GlobalStorage';
 
@@ -53,7 +53,7 @@ export default function RegisterContact(props) {
         
       };
 
-    const getContact = async () => {
+    const getContact = React.useCallback( async () => {
       const data = await dataService.getContact(props.id);
       setEmail(data[0].Email);
       setFirstName(data[0].First_Name);
@@ -65,7 +65,7 @@ export default function RegisterContact(props) {
       setMailingState(data[0].Mailing_State);
       setMailingZip(data[0].Mailing_Zip);
       setMailingCountry(data[0].Mailing_Country);
-    }
+    },[props.id])
     
     const updateContact =  (event) => {
       event.preventDefault();
@@ -91,10 +91,9 @@ export default function RegisterContact(props) {
 
     React.useEffect(()=>{
       if(props.id){
-        console.log('o')
         return getContact()
       }
-    },[])  
+    },[getContact, props.id])  
 
     return (
     <>
@@ -205,7 +204,9 @@ export default function RegisterContact(props) {
           </Box>
               
           <Box sx={{display:'flex', justifyContent:'center',mt:'20px'}}>
-              {props.id ? <Button color='primary' onClick={updateContact} variant="contained" sx={{m:'0 10px'}} startIcon={<AddIcon />}>Edit</Button> : <Button color='primary' type='submit' variant="contained" sx={{m:'0 10px'}} startIcon={<AddIcon />}>Send</Button>}
+              {props.id ? <Button color='primary'  onClick={updateContact} variant="contained" sx={{m:'0 10px'}} startIcon={<AddIcon />}>Edit</Button> : 
+              <Button color='primary' type='submit' variant="contained" sx={{m:'0 10px'}} startIcon={<AddIcon />}>Send</Button>}
+
               <Button onClick={props.closeModal} color='error' variant="contained" sx={{m:'0 10px'}} startIcon={<ArrowBack />}>Cancel</Button>
           </Box>
         </Box>

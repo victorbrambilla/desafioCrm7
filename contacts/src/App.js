@@ -1,3 +1,4 @@
+import { CssBaseline } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { GlobalStorage } from './contexts/GlobalStorage';
 import RoutesList from './routes/RoutesList';
@@ -20,6 +21,7 @@ const theme = createTheme({
   return (
     <GlobalStorage>
       <ThemeProvider theme={theme}>
+        <CssBaseline/>
         <RoutesList/>
       </ThemeProvider>
     </GlobalStorage>
