@@ -211,7 +211,7 @@ window.env = {
   "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\PowerShell\\Modules\\",
   "PUBLIC": "C:\\Users\\Public",
   "REACT_APP_API_URL": "https://www.zohoapis.com/crm/v2",
-  "REACT_APP_GET_TOKEN": "https://accounts.zoho.com/oauth/v2/auth?client_id=1000.SK8VFQGNL3GM80PNASRZ4NNK6SVWXV&response_type=token&scope=ZohoCRM.modules.ALL&redirect_uri=http://localhost:3000/loading",
+  "REACT_APP_GET_TOKEN": "https://accounts.zoho.com/oauth/v2/auth?client_id=1000.SK8VFQGNL3GM80PNASRZ4NNK6SVWXV&response_type=token&scope=ZohoCRM.modules.ALL&redirect_uri=https://eloquent-swanson-e08885.netlify.app/loading",
   "SESSIONNAME": "Console",
   "Simatic_OAM": "C:\\Program Files\\Common Files\\Siemens\\Automation\\Simatic OAM",
   "Simatic_OAM_DATA": "C:\\ProgramData\\Siemens\\Automation\\Simatic OAM",
