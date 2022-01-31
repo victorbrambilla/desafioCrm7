@@ -6,6 +6,7 @@ import Modal  from '@mui/material/Modal';
 import AddIcon from '@mui/icons-material/Add';
 import RegisterContact from './RegisterContact';
 import { AppBar, Fab, Fade } from '@mui/material';
+import { maxWidth } from '@mui/system';
 
 
 const style = {
@@ -17,6 +18,13 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
+    '@media(max-width: 500px)':{
+        height:'90vh',
+        width:'80%',
+        overflowY: 'auto',
+        p:2
+    }
+
   };
 
 
