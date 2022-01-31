@@ -1,8 +1,9 @@
 import axios from 'axios'
+import Cookies from 'js-cookie';
 
 
 const url = process.env.REACT_APP_API_URL;
-const token = localStorage.getItem('token');
+const token = Cookies.get('token');
 const instance = axios.create({
     baseURL: url,
     //params: {token},
@@ -32,7 +33,7 @@ instance.interceptors.request.use(
     (err) => {
         console.log(err.response)
         if(err.response.data.code === "INVALID_REQUEST"){
-            localStorage.removeItem('token');
+            Cookies.remove('token');
             window.location.reload()   
         }
        return Promise.reject(err);
