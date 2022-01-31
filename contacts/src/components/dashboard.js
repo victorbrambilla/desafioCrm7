@@ -9,8 +9,7 @@ export default function Dashboard() {
 
     return (
         <>
-        <Header />
-        <Divider light />
+        <Header/>
         <div style={{height:'80vh'}}>
           <DataTable />
         </div>

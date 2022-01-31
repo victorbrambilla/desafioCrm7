@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie';
 import {
     useLocation,
     Navigate,
@@ -7,7 +8,7 @@ import {
 
 
 export function RequireAuth() {
-    const token=localStorage.getItem('token')
+    const token = Cookies.get('token')
     let location = useLocation();
   
     if (!token) {

@@ -6,12 +6,13 @@ import Typography from '@mui/material/Typography';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Button } from '@mui/material';
 import { useNavigate  } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 export default function Header() {
     const navigate = useNavigate();
     
     const handleChange = () => {
-      localStorage.removeItem('token')
+      Cookies.remove('token')
       navigate('/')
     };
 
