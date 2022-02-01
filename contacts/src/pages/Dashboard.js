@@ -1,14 +1,15 @@
 import { Box } from '@mui/system'
 import React from 'react'
-import Header from './Header'
-import DataTable from './table/Table'
+import Header from '../components/Header'
+import ModalPage from '../components/Modal'
+import DataTable from '../components/table/Table'
 
 
 export default function Dashboard() {
     const style={
       height:'80vh',
       '@media(max-width: 500px)':{
-        height:'75vh'
+        height:'73vh'
     }
     }
 
@@ -18,6 +19,7 @@ export default function Dashboard() {
         <Box sx={style}>
           <DataTable />
         </Box>
+        <ModalPage/>
         </>
      )
 }

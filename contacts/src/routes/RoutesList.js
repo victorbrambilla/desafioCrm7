@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Login from '../components/Login';
-import Page404 from '../components/Page404'
-import Dashboard from '../components/Dashboard';
+import Login from '../pages/Login';
+import Page404 from '../pages/Page404'
+import Dashboard from '../pages/Dashboard';
 import { RequireAuth } from '../services/auth';
-import Loading from '../components/Loading';
+import Loading from '../pages/Loading';
 
 export default function RoutesList() {
     return (
