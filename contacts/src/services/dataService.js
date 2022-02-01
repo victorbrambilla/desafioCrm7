@@ -32,10 +32,7 @@ instance.interceptors.request.use(
     },
     (err) => {
         console.log(err.response)
-        if(err.response.data.code === "INVALID_REQUEST"){
-            Cookies.remove('token');
-            window.location.reload()   
-        }
+       
        return Promise.reject(err);
     }
  );
