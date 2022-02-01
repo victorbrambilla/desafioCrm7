@@ -1,12 +1,12 @@
 import React from 'react'
+
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal  from '@mui/material/Modal';
 import AddIcon from '@mui/icons-material/Add';
-import RegisterContact from './RegisterContact';
-import { AppBar, Fab, Fade } from '@mui/material';
-import { maxWidth } from '@mui/system';
+import RegisterContact from './FormRegisterContact';
+import { Fab, Fade } from '@mui/material';
 
 
 const style = {
@@ -24,9 +24,7 @@ const style = {
         overflowY: 'auto',
         p:2
     }
-
   };
-
 
 
 export default function ModalPage(props) {
@@ -37,8 +35,7 @@ export default function ModalPage(props) {
     return (
         <div>
             {props.id ? <Button size='small' onClick={handleOpen} color='primary'>Edit</Button> :  <Fab onClick={handleOpen} color='primary' sx={{position:'absolute', bottom:30,right:30, zIndex:'100'}}><AddIcon /></Fab>}
-            <AppBar sx={{backgroundColor: 'white',height:'10px',bottom:0,position:'aboslute', zIndex:'99', top: 'auto'}}></AppBar>
-
+        
             <Modal
                 open={open}
                 onClose={handleClose}

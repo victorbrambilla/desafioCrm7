@@ -13,7 +13,7 @@ export default function Loading() {
     React.useEffect(()=>{
         setTimeout(()=>{
             if(Cookies.get('token')){
-               navigate('/')
+               navigate('/');
             } else {
                 var oneHour = new Date(new Date().getTime() + 1 * 3600 * 1000);
                 setToken(location.hash.split('=')[1].split('&')[0]);

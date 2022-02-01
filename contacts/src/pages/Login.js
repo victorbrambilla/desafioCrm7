@@ -13,7 +13,7 @@ import logo from '../assets/zohoLogo.png'
 
 export default function Login() {
 
-  const  url = process.env.REACT_APP_GET_TOKEN
+  const  url = process.env.REACT_APP_GET_TOKEN;
 
   const navigate=()=>{
     window.location.href = url;

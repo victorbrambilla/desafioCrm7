@@ -12,8 +12,8 @@ export default function Header() {
     const navigate = useNavigate();
     
     const handleChange = () => {
-      Cookies.remove('token')
-      navigate('/')
+      Cookies.remove('token');
+      navigate('/');
     };
 
     return (

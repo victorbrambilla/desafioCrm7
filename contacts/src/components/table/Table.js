@@ -1,10 +1,11 @@
 import React from 'react';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
-import { GlobalContext } from '../../contexts/GlobalStorage';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { CustomFooterStatusComponent } from './customFooterTable';
 import { Box, Typography } from '@mui/material';
-import ModalPage from '../Modal';
+
+import { GlobalContext } from '../../contexts/GlobalStorage';
+
 
 const columns = [
   { field: 'First_Name', headerName: 'First name', width: 130 },
@@ -44,21 +45,17 @@ const columns = [
 export default function DataTable() {
   const [selectionModel, setSelectionModel] = React.useState([]);
 
-    const global = React.useContext(GlobalContext);
+  const global = React.useContext(GlobalContext);
 
-    const load = () =>{
-        global.getCont();
-    }
-
-    React.useEffect(()=>{
-        load();
-   },[])
-   
+  React.useEffect(()=>{
+      global.getCont();
+  },[])
+  
 
   return (
     <Box style={{ height: '100%', width: '100%',padding:'30px' }}>
         <Typography color={'terciary'}   variant="h7" component="p">
-                        You have {global.contacts.length} registered contacts
+            You have {global.contacts.length} registered contacts
         </Typography>
         <DataGrid
         rows={global.contacts}
@@ -78,8 +75,6 @@ export default function DataTable() {
           footer: { selectionModel },
         }}
       />
-      <ModalPage/>
-      
     </Box>
   );
 }

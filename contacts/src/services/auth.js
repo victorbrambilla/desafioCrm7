@@ -8,7 +8,7 @@ import {
 
 
 export function RequireAuth() {
-    const token = Cookies.get('token')
+    const token = Cookies.get('token');
     let location = useLocation();
   
     if (!token) {

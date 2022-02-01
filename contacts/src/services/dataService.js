@@ -15,7 +15,7 @@ instance.interceptors.request.use(
        return req;
     },
     (err) => {
-        console.log(err)
+        console.log(err);
        return Promise.reject(err);
     }
  );
@@ -25,13 +25,13 @@ instance.interceptors.request.use(
     (res) => {
         console.log(res)
         if(res.data.data[0].code==='DUPLICATE_DATA'){
-            alert('Contact already exist!')
-            return Promise.reject()
+            alert('Contact already exist!');
+            return Promise.reject();
         }
        return res;
     },
     (err) => {
-        console.log(err.response)
+        console.log(err.response);
        
        return Promise.reject(err);
     }
@@ -41,7 +41,7 @@ export const dataService = {
     
     getContacts: async () => {
         
-        let res = await instance.get(`/contacts`)
+        let res = await instance.get(`/contacts`);
         return res.data.data;
         
     },
