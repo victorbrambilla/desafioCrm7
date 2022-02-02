@@ -55,7 +55,6 @@ export default function ModalPage(props) {
           <Box sx={style}>
             <Typography
               id="modal-modal-title"
-              color={'secondary'}
               variant="h5"
               component="h1"
               textAlign={'center'}
