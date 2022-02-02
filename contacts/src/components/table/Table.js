@@ -46,6 +46,7 @@ export default function DataTable() {
 
   React.useEffect(() => {
     global.getCont();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
