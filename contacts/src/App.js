@@ -3,31 +3,27 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { GlobalStorage } from './contexts/GlobalStorage';
 import RoutesList from './routes/RoutesList';
 
-
-
 const theme = createTheme({
   palette: {
-      mode:'dark',
-     primary: {
+    mode: 'dark',
+    primary: {
       main: '#03C03C',
     },
     secondary: {
-      main:  '#653496',
+      main: '#653496',
     },
   },
 });
 
- function App() {
+function App() {
   return (
     <GlobalStorage>
       <ThemeProvider theme={theme}>
-        <CssBaseline/>
-        <RoutesList/>
+        <CssBaseline />
+        <RoutesList />
       </ThemeProvider>
     </GlobalStorage>
-    
-     
-  )
+  );
 }
 
 export default App;
