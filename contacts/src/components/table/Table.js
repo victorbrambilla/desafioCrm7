@@ -25,7 +25,7 @@ const columns = [
       `${params.row.First_Name || ''} ${params.row.Last_Name || ''}`,
   },
   { field: 'Department', headerName: 'Department', width: 130 },
-  { field: 'Mailing_Street', headerName: 'Mailing Street', width: 130 },
+  { field: 'Mailing_Street', headerName: 'Mailing Street', width: 150 },
   { field: 'Mailing_City', headerName: 'Mailing City', width: 130 },
   { field: 'Mailing_State', headerName: 'Mailing State', width: 130 },
   { field: 'Mailing_Zip', headerName: 'Mailing Zip', width: 130 },
