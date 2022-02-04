@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { CircularProgress } from '@mui/material';
+
 import Login from '../pages/Login';
 import Dashboard from '../pages/Dashboard';
 import { RequireAuth } from '../services/auth';
 import Loading from '../pages/Loading';
-import { CircularProgress } from '@mui/material';
 const Page404 = React.lazy(() => import('../pages/Page404'));
 
 export default function RoutesList() {

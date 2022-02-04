@@ -16,7 +16,7 @@ const connect = async () => {
 }
 
 const disconnect = async () => {
-  await dbDisconnect()
+  await dbDisconnect();
 }
 
 export {
