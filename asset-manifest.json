@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.1ab7f436.js",
+    "main.js": "/static/js/main.4b3ea566.js",
     "static/js/207.756b7ca9.chunk.js": "/static/js/207.756b7ca9.chunk.js",
     "static/media/login.gif": "/static/media/login.bc5df6a7608885c5f76e.gif",
     "static/media/error.gif": "/static/media/error.ea26c9bae5dadbcecfa9.gif",
     "static/media/zohoLogo.png": "/static/media/zohoLogo.a4800c71e2197a1ef657.png",
     "index.html": "/index.html",
-    "main.1ab7f436.js.map": "/static/js/main.1ab7f436.js.map",
+    "main.4b3ea566.js.map": "/static/js/main.4b3ea566.js.map",
     "207.756b7ca9.chunk.js.map": "/static/js/207.756b7ca9.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1ab7f436.js"
+    "static/js/main.4b3ea566.js"
   ]
 }
