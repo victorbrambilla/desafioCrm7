@@ -1,7 +1,7 @@
 # API
 
 
-API rodando em https://rest-api-zoho.herokuapp.com/
+API rodando em https://rest-api-zoho.herokuapp.com/ (clique no link para iniciá-la)
 
 -As chamadas da api são feitas pelo webhooks do CRM 
 <hr>
